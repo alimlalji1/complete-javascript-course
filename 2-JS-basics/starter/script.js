@@ -26,6 +26,7 @@ console.log(job);
 9. Variable mutation and type coercion
 */
 
+/*
 var firstName = 'John';
 var age = 28;
 
@@ -47,3 +48,35 @@ var lastName = prompt('What is his last Name?');
 // Prompt - Pop asking question - with input field where can type in lastName.
 // On doing this - input stored in variable lastName and returned in console from below
 console.log(firstName + ' ' + lastName);
+*/
+
+/******************************************
+10. Basic Operators
+*/
+
+var year, yearJohn, yearMark;
+now = 2020;
+// Question: Why no need for var ageJohn - it's a new variable. How does it work without?
+ageJohn = 28;
+ageMark = 33;
+
+// Math Operators
+yearJohn = now - 28;
+yearMark = now - 33;
+
+console.log(yearJohn);
+
+console.log(now + 2);
+console.log(now + 2);
+console.log(now / 10);
+
+// Logical operators
+var johnOlder = ageJohn < ageMark;
+console.log(johnOlder);
+
+// typeof operator
+console.log(typeof johnOlder);
+console.log(typeof ageJohn);
+console.log(typeof 'Mark is older than John');
+var x;
+console.log(typeof x);
