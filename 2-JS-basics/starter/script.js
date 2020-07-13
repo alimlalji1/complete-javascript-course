@@ -54,6 +54,7 @@ console.log(firstName + ' ' + lastName);
 10. Basic Operators
 */
 
+/*
 var year, yearJohn, yearMark;
 now = 2020;
 // Question: Why no need for var ageJohn - it's a new variable. How does it work without?
@@ -80,3 +81,85 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x);
+*/
+
+/******************************************
+11. Operator Precedence
+*/
+
+/*
+var now = 2018;
+var yearJohn = 1989;
+// Age you become an adult (ie full age)
+var fullAge = 18;
+
+// Multiple operators
+
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+// Check 'Table' in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+// Minus operator has precedence of 14; Greater than or Equal operator has precedence of 12;
+// Minus operator has greater precedence than >=; Hence why now - yearJohn carried out first before comparison to fullAge
+// Assignment operator (=) has precedence of 3 (lowest precedence) - assignment happens as last step - var isFullAge = true;
+
+
+// Grouping
+
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+var average = (ageJohn + ageMark) / 2;
+// Brackets necessary - think bodmas. Same principle with precedence.
+console.log(average);
+
+// Multiple assignments - e.g. assigning a value to 2 variables at the same time
+
+var x, y;
+x = y = (3+5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y);
+// Associativity: for assignment operator -  right to left
+// Therefore, get result of 26, this assigned to y which is then assigned to x
+// Left to right - would yield undefined for y (& x)
+
+// More operators
+
+x *= 2; // Same as x = x*2;
+console.log(x);
+x += 10;
+console.log(x);
+x++ // Same as x = x + 1; and so same as x+=1
+console.log(x);
+*/
+
+/*****************************
+* 12. CODING CHALLENGE 1
+*/
+
+/* Question
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs
+3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
+4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true").
+
+GOOD LUCK 😀
+*/
+
+/*
+var massMark = 50;
+var heightMark = 1.5;
+var BMIMark = massMark/(heightMark * heightMark);
+console.log(BMIMark); // 22.2
+
+var massJohn = 75;
+var heightJohn = 1.75;
+var BMIJohn = massJohn/(heightJohn * heightJohn);
+console.log(BMIJohn); // 24.5
+
+var markHigherBMI = BMIMark > BMIJohn; // should return false
+console.log("Is Mark's BMI higher than John's?" + " " + markHigherBMI);
+*/
+
+/*****************************
+* 14. If/Else Statements
+*/
