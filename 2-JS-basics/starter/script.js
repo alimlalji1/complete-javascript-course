@@ -487,7 +487,7 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
-
+/*
 function tipCalculator(bill) {
   var percentage;
   if (bill < 50) {
@@ -512,3 +512,59 @@ var totals = [bills[0] + tipAmounts[0], bills[1] + tipAmounts[1], bills[2] + tip
 // console.log(totals);
 
 console.log(tipAmounts, totals);
+*/
+
+/*****************************
+* 25. Objects and Properties
+*/
+
+/*
+// Object Literal - way of creating object with key-value pairs
+var john = {
+  firstName: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false
+};
+
+// Ways to retrieve data from object
+console.log(john.firstName); // "John"
+console.log(john["lastName"]); // "Smith"
+var x = "birthYear";
+console.log(john[x]); // "1990"
+
+// Mutate data in object (ie mutate values of keys)
+john.job = "designer";
+john["isMarried"] = true;
+console.log(john);
+
+// new Object syntax - alternate way of creating object with key-value pairs
+var jane = new Object();
+jane.name = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith"
+console.log(jane);
+*/
+
+/*****************************
+* 26. Objects and Properties
+*/
+
+/*
+var john = {
+  firstName: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false,
+  calcAge: function(birthYear) {
+      this.age = 2020 - this.birthYear;
+  }
+};
+
+john.calcAge();
+console.log(john);
+*/
