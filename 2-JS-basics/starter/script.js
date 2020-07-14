@@ -338,6 +338,7 @@ John and Mike both play basketball in different teams. In the latest 3 games, Jo
 GOOD LUCK 😀
 */
 
+/*
 var scoreJohn = (115 + 115 + 115)/3;
 var scoreMike = (114 + 114 + 114)/3;
 var scoreMary = (113 + 113 + 113)/3;
@@ -366,3 +367,101 @@ if (scoreMary > scoreJohn && scoreMary > scoreMike) {
 } else {
   console.log("John and Mikes' teams tie");
 }
+*/
+
+/*****************************
+* 20. Functions
+*/
+
+/*
+function calculateAge(birthYear) {
+  return 2020 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+
+function  yearsUntilRetirement(birthYear, firstName) {
+  var age = calculateAge(birthYear);
+  var retirement = 65 - age;
+  if (retirement > 0) {
+  console.log(firstName + " retires in " + retirement + " years.");
+  } else {
+  console.log(firstName + " is already retired");
+  }
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
+*/
+
+/*****************************
+* 21. Function Statements and Expressions
+*/
+
+/*
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function Expression
+var whatDoYouDo = function(job, firstName) {
+  switch(job) {
+    case 'teacher':
+      return firstName + ' teaches kids how to code';
+    case 'driver':
+      return firstName + ' drives a cab in Lisbon';
+    case 'designer':
+      return firstName + ' designs beautiful websites';
+    default:
+      return firstName + ' does something else';
+  }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
+
+// See notes re expression vs statement(declaration)
+*/
+
+/*****************************
+* 22. Arrays
+*/
+
+// Initialize new array
+var names = ["John", "Mark", "Jane"];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]); // "John"
+console.log(names.length); // "John"
+
+// Mutate array data
+names[1] = "Ben";
+names[names.length] = "Mary";
+console.log(names);
+
+// Different data types
+var john = ["John", "Smith", 1990, "teacher", false];
+
+john.push("blue");
+john.unshift("Mr."); // Similar to push but adds to beginning of array
+
+console.log(john);
+
+john.pop(); // removes last element of array
+john.pop();
+john.shift(); // removes 1st element of array
+console.log(john);
+
+console.log(john.indexOf(1990)); // returns position of argument that we pass in inside this array
+// Most useful feature of indexOf is to determine whether argument is present in array (see below)
+console.log(john.indexOf(23)); // returns -1 => 23 is NOT in array - so indexOf returns -1.
+
+var isDesigner = john.indexOf('designer') === -1 ? "John is NOT a designer" : "John IS a designer";
+console.log(isDesigner); //
+// Search for element "designer" in array - NOT in array.
+// indexOf returns -1. So -1 === -1 => isDesigner variable assigned to "John is NOT a designer"
