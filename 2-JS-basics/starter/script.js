@@ -295,3 +295,74 @@ switch (true) {
 /*****************************
 * 17. Truthy & Falsy Values and Equality Operators
 */
+
+// falsy values: undefined, null, 0, '', NaN(not a number)
+// truthy values: NOT falsy values
+
+/*
+var height;
+
+// Remember - 0 is a falsy value. But in this context - want it to be defined - addition of || to if statement.
+height = 23;
+
+// This if/else - good way to check if variable is defined or not
+if(height || height === 0) {
+  console.log('Variable is defined');
+} else {
+  console.log('Variable is NOT defined');
+};
+
+// Equality Operators
+// == converts '23' to a number and says it's the same as the 23 above (height = 23 - where data type is number)
+if (height == '23') {
+  console.log('The == operator does type coercion!');
+}
+
+// if used === - type coercion does not occur so wouldn't return string above. ie would be false.
+*/
+
+/*****************************
+* CODING CHALLENGE 2
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+
+GOOD LUCK 😀
+*/
+
+var scoreJohn = (115 + 115 + 115)/3;
+var scoreMike = (114 + 114 + 114)/3;
+var scoreMary = (113 + 113 + 113)/3;
+console.log(scoreJohn, scoreMike, scoreMary);
+
+// if (scoreJohn === scoreMike) {
+//   console.log("It's a tie!");
+// } else if (scoreJohn < scoreMike) {
+//   console.log("Mike's team wins with the highest average score");
+// } else {
+//   console.log("John's team wins with the highest average score");
+// }
+
+if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+  console.log("Mary's team wins with " + scoreMary + " points");
+} else if (scoreJohn > scoreMary && scoreJohn > scoreMike) {
+  console.log("John's team wins with " + scoreJohn + " points");
+} else if (scoreMike > scoreMary && scoreMike > scoreJohn) {
+  console.log("Mike's team wins with " + scoreMike + " points");
+} else if (scoreMary === scoreJohn && scoreMary === scoreMike) {
+  console.log("Three way tie!!");
+} else if (scoreMary === scoreJohn && scoreMary > scoreMike) {
+  console.log("Mary and Johns' teams tie");
+} else if (scoreMary === scoreMike && scoreMary > scoreJohn) {
+  console.log("Mary and Mikes' teams tie");
+} else {
+  console.log("John and Mikes' teams tie");
+}
