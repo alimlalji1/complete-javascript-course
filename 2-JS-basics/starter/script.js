@@ -584,6 +584,7 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 GOOD LUCK 😀
 */
 
+/*
 var mark = {
   fullName: "Mark Watson",
   mass: 80,
@@ -614,4 +615,66 @@ if (mark.calcBMI() === john.calcBMI() {
 } else {
   console.log(john.fullName + " has the higher BMI of " + john["bmi"]);
 }
+*/
+
+/*****************************
+* 29. Loops and iteration
+*/
+
+/*
+//For loop
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// What's happening exactly wrt for loop above:
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+// ...
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 FALSE, exit the loop!
+
+
+var john = ["John", "Smith", 1990, "teacher", false, 'blue'];
+
+for (var i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
+
+// while loop
+var i = 0;
+while (i < john.length) {
+  console.log(john[i])
+  i++;
+}
+
+
+// Continue and Break statements
+
+// Continue
+// Let's say hypotethically only wanted to log elements that are strings
+// Can implement continue so if not a string - can quite iteration and ccntinue with next one
+var john = ["John", "Smith", 1990, "teacher", false, 'blue'];
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue; // curly braces not needed as can go on one line
+  console.log(john[i]);
+}
+
+// // Break
+// //  In this example, as soon as encounters something not a string - breaks out of loop entirely
+var john = ["John", "Smith", 1990, "teacher", false, 'blue'];
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') break; // curly braces not needed as can go on one line
+  console.log(john[i]);
+}
+
+// Looping backwards
+var john = ["John", "Smith", 1990, "teacher", false, 'blue'];
+
+for (var i = john.length - 1; i >= 0; i--) {
+  console.log(john[i]);
+}
+*/
 
